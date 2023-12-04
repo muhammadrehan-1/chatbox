@@ -62,10 +62,16 @@ class _SignInScreenState extends State<SignInScreen> {
                 height: MediaQuery.of(context).size.height * 0.12,
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children:  [
-                  SocialMediaWidget(imagePath: "assets/images/social_media_logos/facebook.png"),
-                  SocialMediaWidget(imagePath: "assets/images/social_media_logos/google.png"),
-                  SocialMediaWidget(imagePath: "assets/images/social_media_logos/apple.png"),
+                  children: [
+                    SocialMediaWidget(
+                        imagePath:
+                            "assets/images/social_media_logos/facebook.png"),
+                    SocialMediaWidget(
+                        imagePath:
+                            "assets/images/social_media_logos/google.png"),
+                    SocialMediaWidget(
+                        imagePath:
+                            "assets/images/social_media_logos/apple.png"),
                   ],
                 ),
               ),
@@ -75,17 +81,19 @@ class _SignInScreenState extends State<SignInScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                   const CustomDivider(),
-                    Text('OR', style: const TextStyle().copyWith(
-                      color: greyColor,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),),
+                    const CustomDivider(),
+                    Text(
+                      'OR',
+                      style: const TextStyle().copyWith(
+                        color: greyColor,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                     const CustomDivider(),
                   ],
                 ),
               ),
-
               Container(
                 height: MediaQuery.of(context).size.height * 0.275,
                 width: MediaQuery.of(context).size.width * 0.9,
@@ -126,12 +134,19 @@ class _SignInScreenState extends State<SignInScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.08,
               ),
-              const ButtonAuthentication(name: "Log in"),
+              InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) {
+                        return const SignUpScreen();
+                      }),
+                    );
+                  },
+                  child: const ButtonAuthentication(name: "Log in")),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
               const CharacTextFormField(name: 'Forgot password?')
-
             ],
           ),
         ),

@@ -1,6 +1,5 @@
-import 'package:chatbox/authentication/sign_up_screen.dart';
+// import 'package:chatbox/authentication/sign_up_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'authentication/sign_in_screen.dart';
 
 void main() {
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //Passing Signup screen to home.
-      home: const SignUpScreen(),
+      home: const SignInScreen(),
     );
   }
 }
