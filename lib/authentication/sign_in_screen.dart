@@ -1,21 +1,22 @@
-import 'package:chatbox/widgets/button_authentication.dart';
+import 'package:chatbox/authentication/sign_up_screen.dart';
+import 'package:chatbox/widgets/bordered_text.dart';
+import 'package:chatbox/widgets/custom_divider.dart';
 import 'package:chatbox/widgets/signup_signin_message.dart';
-import 'package:chatbox/widgets/text_form_field_character.dart';
+import 'package:chatbox/widgets/social_media_widget.dart';
 import 'package:flutter/material.dart';
+
 import '../helping_variables/text_form_field_decoration.dart';
-import '../widgets/bordered_text.dart';
+import '../widgets/button_authentication.dart';
+import '../widgets/text_form_field_character.dart';
 
-final greyColor = const Color(0xff797C7B).withOpacity(0.8);
-final formFieldBorderColor = const Color(0xffCDD1D0);
-
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<SignInScreen> createState() => _SignInScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,8 +35,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const BorderedText(name: 'Log in'),
+                  const SizedBox(
+                    width: 7,
+                  ),
                   Text(
-                    'Sign up with',
+                    'to Chatbox',
                     textAlign: TextAlign.center,
                     style: const TextStyle().copyWith(
                       fontFamily: 'Caros',
@@ -43,10 +48,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  const SizedBox(
-                    width: 7,
-                  ),
-                  const BorderedText(name: 'Email'),
                 ],
               ),
               SizedBox(
@@ -54,29 +55,44 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               const SignUpSignInMessage(
                   message:
-                      'Get chatting with friends and family today by signing up for our chat app!',
-                  heightAccordingToScreen: 0.12),
+                      'Welcome back! Sign in using your social account or email us to continue',
+                  heightAccordingToScreen: 0.06),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.55,
+                width: MediaQuery.of(context).size.width * 0.6,
+                height: MediaQuery.of(context).size.height * 0.12,
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children:  [
+                  SocialMediaWidget(imagePath: "assets/images/social_media_logos/facebook.png"),
+                  SocialMediaWidget(imagePath: "assets/images/social_media_logos/google.png"),
+                  SocialMediaWidget(imagePath: "assets/images/social_media_logos/apple.png"),
+                  ],
+                ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.9,
+                height: MediaQuery.of(context).size.height * 0.08,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                   const CustomDivider(),
+                    Text('OR', style: const TextStyle().copyWith(
+                      color: greyColor,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                    ),),
+                    const CustomDivider(),
+                  ],
+                ),
+              ),
+
+              Container(
+                height: MediaQuery.of(context).size.height * 0.275,
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const CharacTextFormField(name: 'Your name'),
-                    TextFormField(
-                      cursorColor: formFieldBorderColor,
-                      textAlign: TextAlign.start,
-                      style: const TextStyle().copyWith(
-                        fontFamily: 'Caros',
-                        fontSize: 16,
-                        color: const Color(0xff000e08),
-                      ),
-                      decoration: decorationForTextFormField,
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.04,
-                    ),
-                    const CharacTextFormField(name: 'Your email'),
+                    const CharacTextFormField(name: 'Email'),
                     TextFormField(
                       cursorColor: formFieldBorderColor,
                       textAlign: TextAlign.start,
@@ -104,21 +120,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.04,
                     ),
-                    const CharacTextFormField(name: 'Confirm password'),
-                    TextFormField(
-                      cursorColor: formFieldBorderColor,
-                      textAlign: TextAlign.start,
-                      style: const TextStyle().copyWith(
-                        fontFamily: 'Caros',
-                        fontSize: 16,
-                        color: const Color(0xff000e08),
-                      ),
-                      decoration: decorationForTextFormField,
-                    ),
                   ],
                 ),
               ),
-              const ButtonAuthentication(name: "Create an account"),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.08,
+              ),
+              const ButtonAuthentication(name: "Log in"),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              const CharacTextFormField(name: 'Forgot password?')
+
             ],
           ),
         ),
