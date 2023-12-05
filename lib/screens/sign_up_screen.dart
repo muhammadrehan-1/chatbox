@@ -6,7 +6,7 @@ import '../helping_variables/text_form_field_decoration.dart';
 import '../widgets/bordered_text.dart';
 
 final greyColor = const Color(0xff797C7B).withOpacity(0.8);
-final formFieldBorderColor = const Color(0xffCDD1D0);
+const formFieldBorderColor =  Color(0xffCDD1D0);
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});

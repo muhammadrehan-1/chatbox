@@ -65,13 +65,13 @@ class _SignInScreenState extends State<SignInScreen> {
                   children: [
                     SocialMediaWidget(
                         imagePath:
-                            "assets/images/social_media_logos/facebook.png"),
+                            "assets/images/social_media_logos/facebook.png",isBlackBorder: true),
                     SocialMediaWidget(
                         imagePath:
-                            "assets/images/social_media_logos/google.png"),
+                            "assets/images/social_media_logos/google.png", isBlackBorder: true,),
                     SocialMediaWidget(
                         imagePath:
-                            "assets/images/social_media_logos/apple.png"),
+                            "assets/images/social_media_logos/apple.png",isBlackBorder:true),
                   ],
                 ),
               ),
@@ -94,7 +94,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   ],
                 ),
               ),
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.275,
                 width: MediaQuery.of(context).size.width * 0.9,
                 child: Column(
