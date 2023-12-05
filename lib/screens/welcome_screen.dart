@@ -1,9 +1,10 @@
-import 'package:chatbox/authentication/sign_in_screen.dart';
-import 'package:chatbox/authentication/sign_up_screen.dart';
+import 'package:chatbox/screens/sign_in_screen.dart';
+import 'package:chatbox/screens/sign_up_screen.dart';
 import 'package:chatbox/widgets/custom_divider.dart';
 import 'package:chatbox/widgets/social_media_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../colors.dart';
 import '../widgets/button_authentication.dart';
 
 final gradientColors = [
@@ -27,7 +28,7 @@ class WelcomeScreen extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              height: MediaQuery.of(context).size.height * 0.6,
+              height: MediaQuery.of(context).size.height * 0.65,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -38,7 +39,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.1,
+                    height: MediaQuery.of(context).size.height * 0.08,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

@@ -1,13 +1,13 @@
-import 'package:chatbox/authentication/sign_up_screen.dart';
 import 'package:chatbox/widgets/bordered_text.dart';
 import 'package:chatbox/widgets/custom_divider.dart';
 import 'package:chatbox/widgets/signup_signin_message.dart';
 import 'package:chatbox/widgets/social_media_widget.dart';
 import 'package:flutter/material.dart';
-
+import '../colors.dart';
 import '../helping_variables/text_form_field_decoration.dart';
 import '../widgets/button_authentication.dart';
 import '../widgets/text_form_field_character.dart';
+import 'home_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -138,7 +138,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) {
-                        return const SignUpScreen();
+                        return const HomeScreen();
                       }),
                     );
                   },

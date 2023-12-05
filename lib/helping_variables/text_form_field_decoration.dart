@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../authentication/sign_up_screen.dart';
+import '../colors.dart';
 
 
-final decorationForTextFormField = InputDecoration(
+ const decorationForTextFormField =  InputDecoration(
   enabledBorder: UnderlineInputBorder(
     borderSide: BorderSide(
       color: formFieldBorderColor,

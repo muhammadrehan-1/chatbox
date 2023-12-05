@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import '../colors.dart';
 
-import '../authentication/sign_up_screen.dart';
 
 class CustomDivider extends StatelessWidget {
   const CustomDivider({super.key});

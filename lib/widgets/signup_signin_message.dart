@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../authentication/sign_up_screen.dart';
+import '../colors.dart';
 
 class SignUpSignInMessage extends StatelessWidget {
   const SignUpSignInMessage({super.key, required this.message, required this.heightAccordingToScreen});

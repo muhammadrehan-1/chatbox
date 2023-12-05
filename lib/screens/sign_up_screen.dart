@@ -2,11 +2,11 @@ import 'package:chatbox/widgets/button_authentication.dart';
 import 'package:chatbox/widgets/signup_signin_message.dart';
 import 'package:chatbox/widgets/text_form_field_character.dart';
 import 'package:flutter/material.dart';
+import '../colors.dart';
 import '../helping_variables/text_form_field_decoration.dart';
 import '../widgets/bordered_text.dart';
 
-final greyColor = const Color(0xff797C7B).withOpacity(0.8);
-const formFieldBorderColor =  Color(0xffCDD1D0);
+
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
